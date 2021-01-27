@@ -116,22 +116,15 @@ python bert/law_classifier.py \
 <!-- Use html table because github markdown doesn't support colspan -->
 <table>
   <tr>
-    <td colspan="2" align="center"><b>XNLI Baseline</b></td>
-    <td colspan="2" align="center"><b>BERT</b></td>
+    <td colspan="2" align="center"><b>LegalBERT - th</b></td>
   </tr>
   <tr>
-    <td align="center">Translate Train</td>
-    <td align="center">Translate Test</td>
-    <td align="center">Multilingual Model</td>
-    <td align="center">Thai-only Model</td>
+    <td align="center">Accuracy (%)</td>
   </tr>
-    <td align="center">62.8</td>
-    <td align="center">64.4</td>
-    <td align="center">66.1</td>
-    <td align="center"><b>68.9</b></td>
+    <td align="center"><b>94</b></td>
 </table>
 
 
-#### GitHub my Project (Code in Project, Data Development)
+#### GitHub my Project (Code in Project, Dataset Development)
 - [here](https://github.com/WiratchawaKannika/LegalDoc_project4) 
 

@@ -1,6 +1,6 @@
 # LegalBERT-th
 
-## LegalBERT-th presents the Legal Thai pre-trained model based on the BERT-th of ThALKeras structure. It is now available to download.
+#### LegalBERT-th presents the Legal Thai pre-trained model based on the BERT-th of ThALKeras structure. It is now available to download.
 - [LegalBERT - th](https://drive.google.com/file/d/11DcZfO1GdvTdv89ofmWY1xFQRW8T4Jzg/view?usp=sharing) 
 
 - [save_model.pb](https://drive.google.com/file/d/15GJuGLSQW3NYvnGajUrFyYxUPTxYktm4/view?usp=sharing) 
@@ -30,6 +30,7 @@ In this project, we adopt a pre-trained Thai SentencePiece model from [BPEmb](ht
 
 Dataset for Pre - training downloaded 
 > Small [dummylaw_sentseg](https://drive.google.com/file/d/1HMrssJmVlIYMajQ6XGMbU6XMa0dHdneI/view?usp=sharing)
+
 > large [lawtext_sentseg](https://drive.google.com/file/d/1TisI4yIvvE2y6a_C_w4vAOaHYlDyS4Uf/view?usp=sharing)
 
 
@@ -40,7 +41,7 @@ export BPE_DIR=/path/to/bpe
 export TEXT_DIR=/path/to/dummylaw_sentseg or lawtext_sentseg\ 
 export DATA_DIR=/path/to/Output
 
-python create_pretraining_data.py \
+python bert/create_pretraining_data.py \
   --input_file=$TEXT_DIR \
   --output_file=$DATA_DIR/tf_examples.tfrecord \
   --vocab_file=$BPE_DIR/th.wiki.bpe.op25000.vocab \
@@ -61,13 +62,13 @@ export BERT_BASE_DIR=/path/to/BERT - th
 export BERT_LEGAL_DIR=/path/to/Output
 
 
-python run_pretraining.py \
+python bert/run_pretraining.py \
   --input_file=$DATA_DIR/tf_examples.tfrecord \
   --output_dir=$BERT_LEGAL_DIR \
   --do_train=True \
   --do_eval=True \
   --bert_config_file=$BERT_BASE_DIR/bert_config.json \
-  --init_checkpoint=$BERT_BASE_DIR/model.ckpt  \
+  --init_checkpoint=$BERT_BASE_DIR/model.ckpt \
   --train_batch_size=32 \
   --max_seq_length=128 \
   --max_predictions_per_seq=20 \
@@ -81,36 +82,36 @@ python run_pretraining.py \
 
 ### legaldoc
 
-[XNLI](http://www.nyu.edu/projects/bowman/xnli/) is a dataset for evaluating a cross-lingual inferential classification task. The development and test sets contain 15 languages which data are thoroughly edited. The machine-translated versions of training data are also provided.
+Thai Law Dataset of Webboaed downloaded 
+[Legal_Dataset](https://drive.google.com/drive/folders/1ZmlXEewbch-SpDscnrgJXzc14JK8oz8s?usp=sharing) 
 
-The Thai-only pre-trained BERT model can be applied to the XNLI task by using training data which are translated to Thai. Spaces between words in the training data need to be removed to make them consistent with inputs in the pre-training step. The processed files of XNLI related to Thai language can be downloaded **[`here`](https://drive.google.com/file/d/1ZAk1JfR6a0TSCkeyQ-EkRtk1w_mQDWFG/view?usp=sharing)**.
 
-Afterwards, the XNLI task can be learned by using this script.
+Afterwards, the legaldoc task can be learned by using this script.
 
 ```shell
 export BPE_DIR=/path/to/bpe
-export XNLI_DIR=/path/to/xnli
+export LAW_DIR_DIR=/path/to/Legal_Dataset
 export OUTPUT_DIR=/path/to/output
-export BERT_BASE_DIR=/path/to/bert_base
+export BERT_BASE_DIR=/path/to/BERT - th
+export BERT_LEGAL_DIR=/path/to/LegalBERT - th  >>  to model.ckpt-20
 
-python run_classifier.py \
-  --task_name=XNLI \
+python bert/law_classifier.py \
+  --task_name=legaldoc \
   --do_train=true \
   --do_eval=true \
-  --data_dir=$XNLI_DIR \
+  --do_export=true \
+  --data_dir=$LAW_DIR \
   --vocab_file=$BPE_DIR/th.wiki.bpe.op25000.vocab \
   --bert_config_file=$BERT_BASE_DIR/bert_config.json \
-  --init_checkpoint=$BERT_BASE_DIR/model.ckpt \
+  --init_checkpoint=$BERT_LEGAL_DIR/model.ckpt-20 \
   --max_seq_length=128 \
   --train_batch_size=32 \
   --learning_rate=5e-5 \
-  --num_train_epochs=2.0 \
+  --num_train_epochs=3.0 \
   --output_dir=$OUTPUT_DIR \
-  --xnli_language=th \
   --spm_file=$BPE_DIR/th.wiki.bpe.op25000.model
 ```
 
-This table compares the Thai-only model with XNLI baselines and the Multilingual Cased model which is also trained by using translated data.
 
 <!-- Use html table because github markdown doesn't support colspan -->
 <table>
@@ -131,4 +132,6 @@ This table compares the Thai-only model with XNLI baselines and the Multilingual
 </table>
 
 
+#### GitHub my Project (Code in Project, Data Development)
+- [here](https://github.com/WiratchawaKannika/LegalDoc_project4) 
 

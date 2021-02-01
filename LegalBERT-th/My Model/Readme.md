@@ -85,6 +85,9 @@ python bert/run_pretraining.py \
 Thai Law Dataset of Webboaed downloaded 
 [Legal_Dataset](https://drive.google.com/drive/folders/1ZmlXEewbch-SpDscnrgJXzc14JK8oz8s?usp=sharing) 
 
+Raw Dataset 
+[Question & answer AND Dummy Dataset](https://drive.google.com/drive/folders/11D9DLQKtesjDz1-Lm314c-AWY2sZFEgR?usp=sharing)
+
 
 Afterwards, the legaldoc task can be learned by using this script.
 

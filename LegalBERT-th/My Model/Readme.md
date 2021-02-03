@@ -131,3 +131,8 @@ python bert/law_classifier.py \
 #### GitHub my Project (Code in Project, Dataset Development)
 - [here](https://github.com/WiratchawaKannika/LegalDoc_project4) 
 
+#### GitHub for WabApp (Prototype) connect with API for Identifying Type of Law of Post in Legal Webboards
+- [here](https://github.com/Tanutcha1998/NSC_23p32i0021) 
+
+
+

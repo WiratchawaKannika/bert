@@ -134,5 +134,5 @@ python bert/law_classifier.py \
 #### GitHub for WabApp (Prototype) connect with API for Identifying Type of Law of Post in Legal Webboards
 - [here](https://github.com/Tanutcha1998/NSC_23p32i0021) 
 
-
-
+#### WebPage detail to LegalBERT-th Project
+- [here](https://wiratchawakannika.github.io/LegalDoc_NLP/?fbclid=IwAR28o0g7Fs6U0TabPae3W99yzsA4IRiXEf-np7FKgTYxCmMTFYqIO4NUt4c) 

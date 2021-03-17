@@ -124,15 +124,15 @@ python bert/law_classifier.py \
   <tr>
     <td align="center">Accuracy (%)</td>
   </tr>
-    <td align="center"><b>94</b></td>
+    <td align="center"><b>92</b></td>
 </table>
 
 
-#### GitHub my Project (Code in Project, Dataset Development)
+#### GitHub my Project (Code scraping data: Thai law, Dataset Development)
 - [here](https://github.com/WiratchawaKannika/LegalDoc_project4) 
 
-#### GitHub for WabApp (Prototype) connect with API for Identifying Type of Law of Post in Legal Webboards
-- [here](https://github.com/Tanutcha1998/NSC_23p32i0021) 
+#### GitHub for Web Application (Prototype) connect with API for Identifying Type of Law of Post in Legal Webboards
+- [here](https://github.com/WiratchawaKannika/WebApp_LegalBERT-th) 
 
-#### WebPage detail to LegalBERT-th Project
-- [here](https://wiratchawakannika.github.io/LegalDoc_NLP/?fbclid=IwAR28o0g7Fs6U0TabPae3W99yzsA4IRiXEf-np7FKgTYxCmMTFYqIO4NUt4c) 
+#### WebPage detail of LegalBERT-th Project
+- [here](https://wiratchawakannika.github.io/LegalDoc_NLP/) 

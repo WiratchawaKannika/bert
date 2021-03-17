@@ -129,10 +129,14 @@ python bert/law_classifier.py \
 
 
 #### GitHub my Project (Code scraping data: Thai law, Dataset Development)
-- [here](https://github.com/WiratchawaKannika/LegalDoc_project4) 
+- [here!](https://github.com/WiratchawaKannika/LegalDoc_project4) 
 
 #### GitHub for Web Application (Prototype) connect with API for Identifying Type of Law of Post in Legal Webboards
-- [here](https://github.com/WiratchawaKannika/WebApp_LegalBERT-th) 
+- [here!](https://github.com/WiratchawaKannika/WebApp_LegalBERT-th) 
+
+#### GitHub for API (LegalBERT-th) for Identifying Type of Law of Post in Legal Webboards
+- [here!](https://github.com/WiratchawaKannika/API_LegalBERT-th)
 
 #### WebPage detail of LegalBERT-th Project
-- [here](https://wiratchawakannika.github.io/LegalDoc_NLP/) 
+- [here!](https://wiratchawakannika.github.io/LegalDoc_NLP/) 
+- [Web Project!](https://wiratchawakannika.github.io/LegalDoc_NLP/)

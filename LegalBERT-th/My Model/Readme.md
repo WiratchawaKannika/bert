@@ -1,6 +1,8 @@
 # LegalBERT-th
 
 #### LegalBERT-th presents the Legal Thai pre-trained model based on the BERT-th of ThALKeras structure. It is now available to download.
+
+- [Dataset: Legal Q&A Thai Dataset and LegalDummy Thai Dataset](https://drive.google.com/drive/folders/1x2TFx5MiKBN89saPxiks8D7ogY9SIIzH?usp=sharing)
 - [LegalBERT - th](https://drive.google.com/file/d/1pU7FHnhgCmZZfL8gosI7XuZBpbsvElil/view?usp=sharing) 
 
 - [save_model.pb](https://drive.google.com/drive/folders/1ed933Vk6k6uEtypIP7a9PG6oKJcuKnKR?usp=sharing) 
